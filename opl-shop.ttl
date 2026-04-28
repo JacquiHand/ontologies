@@ -1,0 +1,37 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:   <http://purl.org/goodrelations/v1#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix os:   <http://www.openlinksw.com/schemas/shop#> .
+
+os:ShopCart a rdfs:Class ;
+  rdfs:label "shop cart" ;
+  rdfs:comment "The definition of a shop cart entity type (Class)." ;
+  rdfs:subClassOf sioc:Container .
+
+os:ShopCartItem a rdfs:Class ;
+  rdfs:label "shop cart item" ;
+  rdfs:comment "The definition of a Shop Cart Item entity type (Class). A shop cart item basically consists of a gr:Offering and a quantity." ;
+  rdfs:subClassOf sioc:Item .
+
+os:contains
+  a rdfs:Property ;
+  rdfs:label "contains" ;
+  rdfs:comment "Associates a ShopCart entity with one or more ShopCartItems ." ;
+  rdfs:domain os:ShopCart ;
+  rdfs:range os:ShopCartItem ;
+  owl:equivalentProperty sioc:container_of .
+
+os:quantity a rdfs:Property ;
+  rdfs:label "quantity" ;
+  rdfs:comment "The quantity of the item in the shop cart. How many of the item does the customer want to purchase." ;
+  rdfs:domain os:ShopCartItem ;
+  rdfs:range xsd:integer .
+
+os:offering a rdfs:Property ;
+  rdfs:label "offering" ;
+  rdfs:comment "The offering a shop cart item refers to." ;
+  rdfs:domain os:ShopCartItem ;
+  rdfs:range gr:Offering .
