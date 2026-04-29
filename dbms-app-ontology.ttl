@@ -1,43 +1,3 @@
-## LinkedIn Tags
-@prefix LinkedInTagGraphDatabases: <https://www.linkedin.com/feed/topic/?keywords=%23GraphDatabase#> .
-@prefix LinkedInTagGraphDatabase: <https://www.linkedin.com/feed/topic/?keywords=%23GraphDatabases#> .
-@prefix LinkedInTagGraphDB: <https://www.linkedin.com/feed/topic/?keywords=%23GraphDB#> .
-@prefix LinkedInTagDocumentDatabases: <https://www.linkedin.com/feed/topic/?keywords=%23DocumentDatabase#> .
-@prefix LinkedInTagDocumentDatabase: <https://www.linkedin.com/feed/topic/?keywords=%23DocumentDatabases#> .
-@prefix LinkedInTagDocumentDB: <https://www.linkedin.com/feed/topic/?keywords=%23DocumentDB#> .
-@prefix LinkedInTagLinkedData: <https://www.linkedin.com/feed/topic/?keywords=%23LinkedData#> .
-@prefix LinkedInTagLinkedData: <https://www.linkedin.com/feed/topic/?keywords=%23LinkedData#> .
-@prefix LinkedInTagSemanticWeb: <https://www.linkedin.com/feed/topic/?keywords=%23SemanticWeb#> .
-@prefix LinkedInTagRDBMS: <https://www.linkedin.com/feed/topic/?keywords=%23RDBMS#> .
-@prefix LinkedInTagKnowledgeGraph: <https://www.linkedin.com/feed/topic/?keywords=%23KnowledgeGraph#> .
-
-## Twitter Tags
-
-@prefix TwitterTagGraphDatabases: <https://twitter.com/hashtag/GraphDatabases#> . 
-@prefix TwitterTagGraphDatabase: <https://twitter.com/hashtag/GraphDatabase#> . 
-@prefix TwitterTagGraphDB: <https://twitter.com/hashtag/GraphDB#> . 
-@prefix TwitterTagDocumentDatabases: <https://twitter.com/hashtag/DocumentDatabases#> . 
-@prefix TwitterTagDocumentDatabase: <https://twitter.com/hashtag/DocumentDatabase#> . 
-@prefix TwitterTagDocumentDB: <https://twitter.com/hashtag/DocumentDB#> . 
-@prefix TwitterTagRDBMS: <https://twitter.com/hashtag/RDBMS#> . 
-@prefix TwitterTagKnowledgeGraph: <https://twitter.com/hashtag/KnowledgeGraph#> . 
-
-## Facebook Tags
-
-@prefix FacebookTagGraphDatabase: <https://www.facebook.com/hashtag/GraphDatabase#> .
-@prefix FacebookTagGraphDatabases: <https://www.facebook.com/hashtag/GraphDatabases#> .
-@prefix FacebookTagGraphDB: <https://www.facebook.com/hashtag/GraphDB#> .
-@prefix FacebookTagDocumentDatabase: <https://www.facebook.com/hashtag/DocumentDatabase#> .
-@prefix FacebookTagDocumentDatabases: <https://www.facebook.com/hashtag/DocumentDatabases#> .
-@prefix FacebookTagDocumentDB: <https://www.facebook.com/hashtag/DocumentDB#> .
-@prefix FacebookTagLinkedData: <https://www.facebook.com/hashtag/LinkedData#> .
-@prefix FacebookTagSemanticWeb: <https://www.facebook.com/hashtag/SemanticWeb#> .
-@prefix FacebookTagRDBMS: <https://www.facebook.com/hashtag/RDBMS#> .
-@prefix FacebookTagRDBMS: <https://www.facebook.com/hashtag/KnowledgeGraph#> .
-@prefix FacebookTagKnowledgeGraph: <https://www.facebook.com/hashtag/KnowledgeGraph#> .
-
-## Others 
-
 @prefix dbpedia-yago: <http://dbpedia.org/class/yago/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix iri: <http://data.openlinksw.com/oplweb/glossary-term/IRI#> .
@@ -85,6 +45,10 @@
 @prefix rdf-relation: <http://data.openlinksw.com/oplweb/glossary-term/RDFRelation#> . 
 @prefix sql-relation: <http://data.openlinksw.com/oplweb/glossary-term/SQLRelation#> .
 @prefix virtuoso: <http://data.openlinksw.com/oplweb/product/Virtuoso#> .
+# @prefix source:      <http://www.openlinksw.com/data/turtle/dbms-app-ontology.ttl> .
+# @prefix source:      <http://www.openlinksw.com/data/turtle/dbms-app-ontology.ttl> .
+# @prefix sourceDAV:   <http://www.openlinksw.com/DAV/data/turtle/dbms-app-ontology.ttl> .
+# @prefix : <http://www.openlinksw.com/ontology/dbms-app-ontology#> .
 @prefix source:      <http://www.openlinksw.com/ontology/dbms-app-ontology#> .
 @prefix sourceDAV:   <http://www.openlinksw.com/DAV/data/turtle/dbms-app-ontology.ttl> .
 @prefix : <http://www.openlinksw.com/ontology/dbms-app-ontology#> .
@@ -94,6 +58,8 @@ sourceDAV:
     a schema:CreativeWork ;
     schema:author <http://www.openlinksw.com/#this> ;
     xhv:license <http://creativecommons.org/licenses/by/4.0/deed.en_US> ;
+    cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
     cc:attributionName "OpenLink Software" ;
     cc:attributionURL <http://www.openlinksw.com/dataspace/organization/openlink#this> ;
     schema:datePublished "2019-04-18T13:00:00-05:00"^^xsd:dateTime ;
@@ -135,10 +101,6 @@ rdfs:label "Database Management System" ;
 skos:altLabel "DBMS" ;
 rdfs:comment "A Software Application that provides Structured Data Definition and Manipulation functionality." ;
 owl:equivalentClass dbpedia-yago:DatabaseManagementSystem106588785 ;
-skos:related LinkedInTagGraphDatabases:this, LinkedInTagDocumentDatabase:this, LinkedInTagDocumentDB:this, 
-			 LinkedInTagRDBMS:this, TwitterTagGraphDatabases:this, TwitterInTagDocumentDatabase:this, 
-			 TwitterTagDocumentDB:this, TwitterTagRDBMS:this, FacebookTagGraphDatabases:this, 
-			 FacebookTagDocumentDatabase:this, FacebookTagDocumentDB:this, FacebookTagRDBMS:this ; 
 schema:maninEntityOfPage <https://docs.google.com/spreadsheets/d/1QHbPEsZqyNb6k0JB5j8vHkuI514c44mkNu-SaO8DekM/edit#gid=1757189899>,
 	 					 <http://www.openlinksw.com/data/turtle/general/tabulated-data-comparison.ttl>,
 						 <http://linkeddata.uriburner.com/describe/?url=https%3A%2F%2Fwww.openlinksw.com%2Fdata%2Fturtle%2Fgeneral%2Ftabulated-data-comparison.ttl%23content&graph=http%3A%2F%2Fwww.openlinksw.com%2Fdata%2Fturtle%2Fgeneral%2Ftabulated-data-comparison.ttl&distinct=1> ;
