@@ -1,0 +1,317 @@
+@prefix schema:    <http://schema.org/> .
+@prefix cvocab:    <http://open-services.net/ns/core#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:        <http://purl.org/goodrelations/v1#> .
+@prefix sioc:      <http://rdfs.org/sioc/ns#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix siocs:     <http://rdfs.org/sioc/services#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdrs:      <http://www.w3.org/2007/05/powder-s#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix xhv:       <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix oplquo:    <http://www.openlinksw.com/ontology/quotations#> .
+@prefix oplp:      <http://www.openlinksw.com/ontology/purchases#> .
+@prefix vcard:     <http://www.w3.org/2006/vcard/> .
+@prefix cc:        <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/quotations#>
+  a owl:Ontology ;
+  rdfs:label """OpenLink Quotations Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe quotations. Examples include
+  the involved items and offers etc."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/quotations> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  owl:versionInfo "1.1.0"^^xsd:string ;
+  owl:imports <http://purl.org/goodrelations/v1> ,
+              <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ;
+  owl:imports <http://www.w3.org/2006/vcard/> ;
+  <http://open.vocab.org/terms/defines> oplquo:Quotation ,
+                                        oplquo:CustomerQuotation ,
+                                        oplquo:ThirdPartyQuotation ,
+                                        oplquo:QuotationItem ,
+                                        oplquo:contains ,
+                                        oplquo:hasOffering ,
+                                        oplquo:quotationDate ,
+                                        oplquo:madeQuotation ,
+                                        oplquo:quotationNumber ,
+                                        oplquo:customerPurchaseId ,
+                                        oplquo:hasQuotationFile ,
+                                        oplquo:quantity ,
+                                        oplquo:quotationExpirationDate ,
+                                        oplquo:basedOnPurchase ,
+                                        oplquo:purchasedAs ,
+                                        oplquo:hasAccountManager ,
+                                        oplquo:usedShippingAgent ,
+                                        oplquo:usedBillingAddress ,
+                                        oplquo:usedCustomergAgent ;
+  schema:about oplquo:Quotation ,
+                                        oplquo:CustomerQuotation ,
+                                        oplquo:ThirdPartyQuotation ,
+                                        oplquo:QuotationItem ,
+                                        oplquo:contains ,
+                                        oplquo:hasOffering ,
+                                        oplquo:quotationDate ,
+                                        oplquo:madeQuotation ,
+                                        oplquo:quotationNumber ,
+                                        oplquo:customerPurchaseId ,
+                                        oplquo:hasQuotationFile ,
+                                        oplquo:quantity ,
+                                        oplquo:quotationExpirationDate ,
+                                        oplquo:basedOnPurchase ,
+                                        oplquo:purchasedAs ,
+                                        oplquo:hasAccountManager ,
+                                        oplquo:usedShippingAgent ,
+                                        oplquo:usedBillingAddress ,
+                                        oplquo:usedCustomergAgent .
+
+
+<http://www.openlinksw.com/DAV/data/turtle/quotations.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Quotations Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Quotations."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/quotations#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/quotations> ;
+  xhv:describes <http://www.openlinksw.com/ontology/quotations#> ;
+  schema:about <http://www.openlinksw.com/ontology/quotations#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/quotations#> .
+
+<http://www.openlinksw.com/data/turtle/quotations.ttl>
+  a foaf:Document , schema:TechArticle ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  rdfs:label """OpenLink Quotations Ontology Description Document (Turtle)"""^^xsd:string ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe the OpenLink Quotations Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/quotations#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/quotations> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:describes <http://www.openlinksw.com/ontology/quotations#> ;
+  schema:about <http://www.openlinksw.com/ontology/quotations#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/quotations#> .
+
+<http://www.openlinksw.com/ontology/quotations>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Quotations Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Quotations Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/quotations#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/quotations#> ;
+  foaf:topic oplquo:Quotation ,
+             oplquo:CustomerQuotation ,
+             oplquo:ThirdPartyQuotation ,
+             oplquo:QuotationItem ,
+             oplquo:contains ,
+             oplquo:hasOffering ,
+             oplquo:quotationDate ,
+             oplquo:madeQuotation ,
+             oplquo:quotationNumber ,
+             oplquo:customerPurchaseId ,
+             oplquo:hasQuotationFile ,
+             oplquo:quantity ,
+             oplquo:quotationExpirationDate ,
+             oplquo:basedOnPurchase ,
+             oplquo:purchasedAs ,
+             oplquo:hasAccountManager ,
+             oplquo:usedShippingAgent ,
+             oplquo:usedBillingAddress ,
+             oplquo:usedCustomergAgent .
+
+<http://www.openlinksw.com/data/turtle/quotations.ttl>
+  rdfs:seeAlso <http://virtuoso.openlinksw.com/offers/> ,
+               <http://uda.openlinksw.com/offers/> ,
+               <http://www.openlinksw.com/data/turtle/shop.ttl> ,
+               <http://www.openlinksw.com/data/turtle/offers.ttl> ,
+               <http://www.openlinksw.com/data/turtle/products.ttl> ,
+               <http://www.openlinksw.com/data/turtle/contracts.ttl> ,
+               <http://www.openlinksw.com/data/turtle/software.ttl> ,
+               <http://www.openlinksw.com/data/turtle/machines.ttl> ,
+               <http://www.openlinksw.com/data/turtle/vendors.ttl> ,
+               <http://www.openlinksw.com/data/turtle/features.ttl> ,
+               <http://www.openlinksw.com/data/turtle/payments.ttl> ,
+               <http://www.openlinksw.com/data/turtle/licenses.ttl> .
+
+# <-------------- Classes --------------> #
+
+oplquo:Quotation a owl:Class ;
+  rdfs:label "Quotation" ;
+  skos:altLabel "Quotation" ;
+  rdfs:comment """Entity type of resources representing a Quotation (Class)."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:subClassOf sioc:Container .
+
+oplquo:CustomerQuotation a owl:Class ;
+  rdfs:label "Customer Quotation" ;
+  skos:altLabel "Customer Quotation" ;
+  rdfs:comment """Entity type of resources representing a Customer Quotation (Class). A Customer Quotation is tied to the customer who created the quote and only they can purchase it."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:subClassOf oplquo:Quotation .
+
+oplquo:ThirdPartyQuotation a owl:Class ;
+  rdfs:label "Third Party Quotation" ;
+  skos:altLabel "Third Party Quotation" ;
+  rdfs:comment """Entity type of resources representing a Third Party Quotation (Class). A Third Party Quotation is not tied to any customer and can be purchased by anyone. It is typically created by a member of the sales team."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:subClassOf oplquo:Quotation .
+
+oplquo:QuotationItem a owl:Class ;
+  rdfs:label "Quotation Item" ;
+  skos:altLabel "Quotation Item" ;
+  rdfs:comment """Entity type of resources representing a quotation item (Class)."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:subClassOf sioc:Item .
+
+# <-------------- Properties --------------> #
+
+oplquo:contains
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "contains" ;
+  skos:altLabel "Contains" ;
+  rdfs:comment """Associates a Quotation with one or more Quotation Items."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range oplquo:QuotationItem ;
+  rdfs:subPropertyOf sioc:container_of .
+
+oplquo:hasOffering
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasOffering" ;
+  skos:altLabel "Offering" ;
+  rdfs:comment """Associates a QuotationItem with the schema:Offer that is included in the quotation."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:QuotationItem ;
+  rdfs:range schema:Offer .
+
+oplquo:quotationDate
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "quotationDate" ;
+  skos:altLabel "Quotation Date" ;
+  rdfs:comment """The date and time the Quotation was completed."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range xsd:dateTime .
+
+oplquo:madeQuotation
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "madeQuotation" ;
+  skos:altLabel "Made Quotation" ;
+  rdfs:comment """Associates a Quotation with the agent (Organization, Person or Bot) that actually made/requested the Quotation."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range foaf:Agent .
+
+oplquo:quotationNumber
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "quotationNumber" ;
+  skos:altLabel "Quotation Number" ;
+  rdfs:comment """The Quotation number, an internal identifier for the quotation."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range xsd:string .
+
+oplquo:customerPurchaseId
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "customerPurchaseId" ;
+  skos:altLabel "Customer Purchase ID" ;
+  rdfs:comment """An optional purchase order ID provided by the customer and printed on the quotation. It allows the customer to easier map the quotation."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range xsd:string .
+
+oplquo:hasQuotationFile
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasQuotationFile" ;
+  skos:altLabel "Quotation File" ;
+  rdfs:comment """Associates a Quotation with the quotation file."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range rdfs:Resource .
+
+oplquo:quantity
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "quantity" ;
+  skos:altLabel "Quantity" ;
+  rdfs:comment """The quantity of the item in the quotation. States how many items the customer wants to purchase."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range xsd:integer .
+
+oplquo:quotationExpirationDate
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "quotationExpirationDate" ;
+  skos:altLabel "Quotation Expiration Date" ;
+  rdfs:comment """The date and time the Quotation will expire, ie. after this date the prices cannot be guaranteed anymore."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range xsd:dateTime .
+
+oplquo:basedOnPurchase
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "basedOnPurchase" ;
+  skos:altLabel "Based on Purchase" ;
+  rdfs:comment """Associates a Purchase with the Quotation it was based on."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplp:Purchase ;
+  rdfs:range oplquo:Quotation ;
+  owl:inverseOf oplquo:purchasedAs .
+
+oplquo:purchasedAs
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "purchasedAs" ;
+  skos:altLabel "Purchased As" ;
+  rdfs:comment """Associates a Quotation with the Purchase it resulted in."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range oplp:Purchase ;
+  owl:inverseOf oplquo:basedOnPurchase .
+
+oplquo:hasAccountManager
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasAccountManager" ;
+  skos:altLabel "Account Manager" ;
+  rdfs:comment """Associates a ThirdPartyQuotation with the sales agent that created it."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:ThirdPartyQuotation ;
+  rdfs:range foaf:Agent .
+
+oplquo:usedBillingAddress
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "usedBillingAddress" ;
+  skos:altLabel "Used Billing Agent" ;
+  rdfs:comment """Associates a Quotation with the agent whose address was used for billing. Typically the agent is copied into the quotation storage to protect from future changes to the agent."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range foaf:Agent .
+
+oplquo:usedCustomergAgent
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "usedCustomergAgent" ;
+  skos:altLabel "Used Customerg Agent" ;
+  rdfs:comment """Associates a Quotation with the agent whose address was used as the customer, ie. the agent who will eventually complete the purchase. Typically the agent is copied into the quotation storage to protect from future changes to the agent."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range foaf:Agent .
+
+oplquo:usedShippingAgent
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "usedShippingAgent" ;
+  skos:altLabel "Used Shipping Agent" ;
+  rdfs:comment """Associates a Quotation with the agent whose address was used for shipping. Typically the agent is copied into the quotation storage to protect from future changes to the agent."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/quotations#> ;
+  rdfs:domain oplquo:Quotation ;
+  rdfs:range foaf:Agent .
+
+xhv:related owl:equivalentProperty rdfs:seeAlso .

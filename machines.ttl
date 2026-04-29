@@ -1,0 +1,178 @@
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
+@prefix schema:  <http://schema.org/> .
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplfea:  <http://www.openlinksw.com/ontology/features#> .
+@prefix oplpro:  <http://www.openlinksw.com/ontology/products#> .
+@prefix oplsof:  <http://www.openlinksw.com/ontology/software#> .
+@prefix oplmch:  <http://www.openlinksw.com/ontology/machines#> .
+@prefix opllic:  <http://www.openlinksw.com/ontology/licenses#> .
+@prefix opl:     <http://www.openlinksw.com/schema/attribution#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/machines#> a owl:Ontology ;
+  rdfs:label """OpenLink Machines Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe machines. Examples include processors,
+  processors families etc ."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/machines> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  owl:versionInfo "1.0.0"^^xsd:string ;
+  owl:imports <http://purl.org/goodrelations/v1> ,
+              <http://www.openlinksw.com/ontology/licenses#>  ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ,
+              <http://www.w3.org/2002/07/owl#> ;
+  <http://open.vocab.org/terms/defines>
+      oplmch:Processor ,
+      oplmch:ProcessorFamily ,
+      oplmch:hasProcessor ,
+      oplmch:hasProcessorFamily ,
+      oplmch:hasProcessorMode ,
+      oplmch:hasProcessorVersion ,
+      oplmch:ProcessorMode ;
+  schema:about
+      oplmch:Processor ,
+      oplmch:ProcessorFamily ,
+      oplmch:hasProcessor ,
+      oplmch:hasProcessorFamily ,
+      oplmch:hasProcessorMode ,
+      oplmch:hasProcessorVersion ,
+      oplmch:ProcessorMode .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/machines.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Machines Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Machines."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/machines#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/machines> ;
+  xhv:describes <http://www.openlinksw.com/ontology/machines#> ;
+  schema:about <http://www.openlinksw.com/ontology/machines#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/machines#> .
+
+<http://www.openlinksw.com/data/turtle/machines.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Machines Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Machines Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/machines#> ;
+  xhv:canonical <http://www.openlinksw.com/ontology/machines> ;
+  xhv:describes <http://www.openlinksw.com/ontology/machines#> ;
+  schema:about <http://www.openlinksw.com/ontology/machines#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/machines#> .
+
+<http://www.openlinksw.com/ontology/machines>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Machines Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Machines Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/machines#> ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/machines#> ;
+  foaf:topic
+      oplmch:Processor ,
+      oplmch:ProcessorFamily ,
+      oplmch:hasProcessor ,
+      oplmch:hasProcessorFamily ,
+      oplmch:hasProcessorMode ,
+      oplmch:hasProcessorVersion ,
+      oplmch:ProcessorMode .
+
+<http://www.openlinksw.com/data/turtle/machines.ttl>
+  rdfs:seeAlso <http://virtuoso.openlinksw.com/offers/> ,
+               <http://uda.openlinksw.com/offers/> ,
+               <http://www.openlinksw.com/data/turtle/shop.ttl> ,
+               <http://www.openlinksw.com/data/turtle/offers.ttl> ,
+               <http://www.openlinksw.com/data/turtle/contracts.ttl> ,
+               <http://www.openlinksw.com/data/turtle/software.ttl> ,
+               <http://www.openlinksw.com/data/turtle/products.ttl> ,
+               <http://www.openlinksw.com/data/turtle/vendors.ttl> ,
+               <http://www.openlinksw.com/data/turtle/features.ttl> ,
+               <http://www.openlinksw.com/data/turtle/purchases.ttl> ,
+               <http://www.openlinksw.com/data/turtle/payments.ttl> ,
+               <http://www.openlinksw.com/data/turtle/licenses.ttl> .
+
+# <-------------- Processor --------------> #
+
+# <-------------- Processor Classes --------------> #
+
+oplmch:Processor a owl:Class ;
+      rdfs:subClassOf oplsof:ProcessorFamily ;
+      rdfs:label "Processor"^^xsd:string ;
+      rdfs:comment """Processor."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> .
+
+oplmch:ProcessorFamily a owl:Class ;
+      rdfs:label "Processor Family"^^xsd:string ;
+      rdfs:comment """Processor Family"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> ;
+      owl:disjointWith oplsof:OperatingSystem .
+
+oplmch:ProcessorMode a owl:Class ;
+      rdfs:label "Processor Mode"^^xsd:string ;
+      rdfs:comment """Processor Mode"""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> .
+
+# <-------------- Processor Properties --------------> #
+
+oplmch:hasProcessor a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#Processors> ,
+                         <http://www.openlinksw.com/schemas/oplweb#OpsysProcessor>;
+      rdfs:comment """Associates a Product , Product Format or Product Category with a Processor"""@en ;
+      rdfs:label "hasProcessor"^^xsd:string ;
+      skos:altLabel "Processor"^^xsd:string ;
+      rdfs:domain oplsof:OperatingSystem ;
+      rdfs:range oplmch:Processor .
+
+oplmch:hasProcessorFamily a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#ProcessorFamilies> ;
+      rdfs:comment """Associates a Product , Product Family or Product Format with a Processor Family"""@en ;
+      rdfs:label "hasProcessorFamily"^^xsd:string ;
+      skos:altLabel "Processor Family"^^xsd:string ;
+      rdfs:domain oplmch:Processor ;
+      rdfs:range oplmch:ProcessorFamily .
+
+oplmch:hasProcessorVersion a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#ProcessorVersion> ;
+      rdfs:comment """Processor Version"""@en ;
+      rdfs:label "hasProcessorVersion"^^xsd:string ;
+      skos:altLabel "Processor Version"^^xsd:string ;
+      rdfs:domain oplmch:Processor ;
+      rdfs:range xsd:string .
+
+oplmch:hasProcessorMode a owl:ObjectProperty, rdf:Property ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/machines#> ;
+      rdfs:comment """Associates Processor with Processor Mode"""@en ;
+      rdfs:label "hasProcessorMode"^^xsd:string ;
+      skos:altLabel "Processor Mode"^^xsd:string ;
+      rdfs:domain oplmch:Processor ;
+      rdfs:range oplmch:ProcessorMode .
+

@@ -1,0 +1,201 @@
+@prefix schema:    <http://schema.org/> .
+@prefix cvocab:    <http://open-services.net/ns/core#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:        <http://purl.org/goodrelations/v1#> .
+@prefix sioc:      <http://rdfs.org/sioc/ns#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix siocs:     <http://rdfs.org/sioc/services#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdrs:      <http://www.w3.org/2007/05/powder-s#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix xhv:       <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix oplprchs:  <http://www.openlinksw.com/ontology/purchases#> .
+@prefix oplcomp:   <http://www.openlinksw.com/ontology/components#> .
+@prefix oplvad:    <http://www.openlinksw.com/ontology/vad#> .
+@prefix oplsof:    <http://www.openlinksw.com/ontology/software#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix doap:      <http://usefulinc.com/ns/doap#> .
+@prefix cc:        <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/components#>
+  a owl:Ontology ;
+  rdfs:label """OpenLink Components Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relationship types used to describe application [or service] components."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/components> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  owl:versionInfo "1.0.0"^^xsd:string ;
+  owl:imports <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ;
+  <http://open.vocab.org/terms/defines>
+    oplcomp:Component ,
+    oplcomp:hasSubComponent ,
+    oplcomp:hasParameter ,
+    oplcomp:hasComponent ,
+    oplcomp:isSubComponentOf ,
+    oplcomp:hasComponentDependency ,
+    oplcomp:hasComponentOptionalDependency ,
+    oplcomp:hasComponentMandatoryDependency ;
+  schema:about
+    oplcomp:Component ,
+    oplcomp:hasSubComponent ,
+    oplcomp:hasParameter ,
+    oplcomp:hasComponent ,
+    oplcomp:isSubComponentOf ,
+    oplcomp:hasComponentDependency ,
+    oplcomp:hasComponentOptionalDependency ,
+    oplcomp:hasComponentMandatoryDependency .
+
+<http://www.openlinksw.com/DAV/data/turtle/components.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Components Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Components."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/components#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/components> ;
+  xhv:describes <http://www.openlinksw.com/ontology/components#> ;
+  schema:about <http://www.openlinksw.com/ontology/components#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/components#> .
+
+<http://www.openlinksw.com/data/turtle/components.ttl>
+  a foaf:Document , schema:TechArticle ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  rdfs:label "OpenLink Components Ontology Description Document (Turtle)" ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe the OpenLink Components Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/components#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/components> ;
+  xhv:describes <http://www.openlinksw.com/ontology/components#> ;
+  schema:about <http://www.openlinksw.com/ontology/components#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/components#> .
+
+<http://www.openlinksw.com/ontology/components>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Components Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Components Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/components#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/components#> ;
+  foaf:topic oplcomp:Component ,
+             oplcomp:hasSubComponent ,
+             oplcomp:hasParameter ,
+             oplcomp:hasComponent ,
+             oplcomp:isSubComponentOf ,
+             oplcomp:hasComponentDependency ,
+             oplcomp:hasComponentOptionalDependency ,
+             oplcomp:hasComponentMandatoryDependency .
+
+# <-------------- Classes --------------> #
+
+oplcomp:Component a owl:Class ;
+  rdfs:label "Component" ;
+  skos:altLabel "Component" ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> .
+
+# <-------------- Properties --------------> #
+
+oplcomp:hasSubComponent
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasSubComponent" ;
+  skos:altLabel "Sub-Component" ;
+  rdfs:comment """A sub-component is a smaller functional entity of another component."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Component ;
+  owl:inverseOf oplcomp:isSubComponentOf ;
+  rdfs:subPropertyOf dcterms:hasPart .
+
+oplcomp:isSubComponentOf
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "isSubComponentOf" ;
+  skos:altLabel "Is Sub-Component Of" ;
+  rdfs:comment """A sub-component is a smaller functional entity of another component."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Component ;
+  owl:inverseOf oplcomp:hasSubComponent ;
+  rdfs:subPropertyOf dcterms:isPartOf .
+
+oplcomp:hasParameter
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasParameter" ;
+  skos:altLabel "Parameter" ;
+  rdfs:comment """A software component can have an arbitrary number of parameters which allow to customize a component. Typical parameters are limits."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Parameter .
+
+oplcomp:hasComponent
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "hasComponent" ;
+  skos:altLabel "Has Component" ;
+  rdfs:comment """A Project has an arbitrary number of software components which are developed in the project."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:domain  oplsof:OperatingSystem ;
+  schema:domainIncludes
+      doap:Project ,
+      oplsof:OpsysFamily ;
+  rdfs:range oplcomp:Component ;
+  owl:inverseOf oplcomp:isComponentOf ;
+  rdfs:subPropertyOf dcterms:hasPart .
+
+oplcomp:isComponentOf
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:label "isComponentOf" ;
+  skos:altLabel "Is Component Of" ;
+  rdfs:comment """A Project has an arbitrary number of software components which are developed in the project."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range doap:Project ;
+  owl:inverseOf oplcomp:hasComponent ;
+  rdfs:subPropertyOf dcterms:isPartOf .
+
+
+oplcomp:hasComponentDependency
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:label "hasComponentDependency"^^xsd:string ;
+  skos:altLabel "Component Dependency"^^xsd:string ;
+  rdfs:comment """Property that indicates dependency relationship [association] between an application [or service]
+  and distinct component. For instance, application [or service] could depend on an authentication component for
+  identity claims verification and a separate acl component for fine-grained data control policy enforcement."""@en ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Component .
+
+oplcomp:hasComponentOptionalDependency
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:label "hasComponentOptionalDependency"^^xsd:string ;
+  skos:altLabel "Component Optional Dependency"^^xsd:string ;
+  rdfs:comment """Property that indicates optional-dependency relationship [association] between an application [or service]
+  and distinct component. In this kind of relationship, an application [or service] can function with or without
+  associated components"""@en ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Component .
+
+oplcomp:hasComponentMandatoryDependency
+  a owl:ObjectProperty, rdf:Property ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/components#> ;
+  rdfs:label "hasComponentMandatoryDependency"^^xsd:string ;
+  skos:altLabel "Component Mandatory Dependency"^^xsd:string ;
+  rdfs:comment """Property that indicates a mandatory-dependency relationship [association] between an application [or service]
+  and distinct component. In this kind of relationship, an application [or service] cannot function without associated
+  components"""@en ;
+  rdfs:domain oplcomp:Component ;
+  rdfs:range oplcomp:Component .
+
+xhv:related owl:equivalentProperty rdfs:seeAlso .
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
