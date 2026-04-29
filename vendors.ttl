@@ -1,0 +1,250 @@
+@prefix cvocab:  <http://open-services.net/ns/core#> .
+@prefix sioc:    <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:  <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:      <http://purl.org/goodrelations/v1#> .
+@prefix siocs:   <http://rdfs.org/sioc/services#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:    <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont: <http://www.productontology.org/id/> .
+@prefix xhv:     <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix oplmch:  <http://www.openlinksw.com/ontology/machines#> .
+@prefix oplfea:  <http://www.openlinksw.com/ontology/features#> .
+@prefix oplpro:  <http://www.openlinksw.com/ontology/products#> .
+@prefix oplven:  <http://www.openlinksw.com/ontology/vendors#> .
+@prefix opllic:  <http://www.openlinksw.com/ontology/licenses#> .
+@prefix oplsof:  <http://www.openlinksw.com/ontology/software#> .
+@prefix opl:     <http://www.openlinksw.com/schema/attribution#> .
+@prefix cc:      <http://creativecommons.org/ns#> .
+@prefix schema:  <http://schema.org/> .
+
+<http://www.openlinksw.com/ontology/vendors#> a owl:Ontology  ;
+  rdfs:label """OpenLink Vendors Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe vendors.
+  Examples include categories, families etc."""@en ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/vendors> ;
+  owl:versionInfo "1.0.0"^^xsd:string  ;
+  owl:imports <http://purl.org/goodrelations/v1>  ,
+              <http://xmlns.com/foaf/0.1/> ,
+              <http://www.openlinksw.com/ontology/licenses#>   ;
+  <http://open.vocab.org/terms/defines>
+      oplven:Vendor ,
+      oplven:VendorCategory ,
+      oplven:VendorCategoryFamily ,
+      oplven:isVendorCategoryOf ,
+      oplven:hasVendorCategory ,
+      oplven:hasVendorCategoryFamily ,
+      oplven:isVendorCategoryFamilyOf ,
+      oplven:hasWikipediaPage ,
+      oplven:hasVendor ,
+      oplven:isVendorOf ,
+      oplven:hasVendorName ;
+  schema:about
+      oplven:Vendor ,
+      oplven:VendorCategory ,
+      oplven:VendorCategoryFamily ,
+      oplven:isVendorCategoryOf ,
+      oplven:hasVendorCategory ,
+      oplven:hasVendorCategoryFamily ,
+      oplven:isVendorCategoryFamilyOf ,
+      oplven:hasWikipediaPage ,
+      oplven:hasVendor ,
+      oplven:isVendorOf ,
+      oplven:hasVendorName .
+
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/vendors.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Vendors Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Vendors."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/vendors#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/vendors> ;
+  xhv:describes <http://www.openlinksw.com/ontology/vendors#> ;
+  schema:about <http://www.openlinksw.com/ontology/vad#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/vendors#> .
+
+<http://www.openlinksw.com/data/turtle/vendors.ttl>
+  a foaf:Document  ;
+  rdfs:label """OpenLink Vendors Ontology Description Document (Turtle)"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/>  ;
+  schema:creator <http://www.openlinksw.com/#this>  ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Vendors Ontology."""@en  ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/vendors#> ;
+  schema:about <http://www.openlinksw.com/ontology/vendors#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/vendors> ;
+  xhv:describes <http://www.openlinksw.com/ontology/vendors#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/vendors#> .
+
+<http://www.openlinksw.com/ontology/vendors>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Vendors Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Vendors Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/vendors#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/vendors#> ;
+  foaf:topic
+      oplven:Vendor ,
+      oplven:VendorCategory ,
+      oplven:VendorCategoryFamily ,
+      oplven:isVendorCategoryOf ,
+      oplven:hasVendorCategory ,
+      oplven:hasVendorCategoryFamily ,
+      oplven:isVendorCategoryFamilyOf ,
+      oplven:hasWikipediaPage ,
+      oplven:hasVendor ,
+      oplven:isVendorOf ,
+      oplven:hasVendorName .
+
+<http://www.openlinksw.com/data/turtle/vendors.ttl>
+  rdfs:seeAlso <http://virtuoso.openlinksw.com/offers/> ,
+               <http://uda.openlinksw.com/offers/> ,
+               <http://www.openlinksw.com/data/turtle/shop.ttl> ,
+               <http://www.openlinksw.com/data/turtle/products.ttl> ,
+               <http://www.openlinksw.com/data/turtle/software.ttl> ,
+               <http://www.openlinksw.com/data/turtle/machines.ttl> ,
+               <http://www.openlinksw.com/data/turtle/offers.ttl> ,
+               <http://www.openlinksw.com/data/turtle/contracts.ttl> ,
+               <http://www.openlinksw.com/data/turtle/features.ttl> ,
+               <http://www.openlinksw.com/data/turtle/purchases.ttl> ,
+               <http://www.openlinksw.com/data/turtle/payments.ttl> ,
+               <http://www.openlinksw.com/data/turtle/licenses.ttl> .
+
+# <-------------- Vendors --------------> #
+
+# <-------------- Vendors Classes --------------> #
+
+oplven:Vendor a owl:Class  ;
+      rdfs:subClassOf gr:BusinessEntity , <http://www.openlinksw.com/schemas/oplweb#VendorCategory>  ;
+      rdfs:label "Vendor"^^xsd:string  ;
+      rdfs:comment """Vendor"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#> .
+
+oplven:VendorCategory a owl:Class  ;
+      rdfs:subClassOf oplven:VendorCategoryFamily ;
+      rdfs:label "Vendor Category"^^xsd:string  ;
+      rdfs:comment """Vendor Category"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#> .
+
+oplven:VendorCategoryFamily a owl:Class  ;
+      rdfs:label "Vendor Category Family"^^xsd:string  ;
+      rdfs:comment """Vendor Category Family"""@en  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#> .
+
+# <-------------- Vendors Properties --------------> #
+
+oplven:isVendorCategoryOf a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#isOfVendorCategory>  ;
+      rdfs:comment """Is Vendor Category Of"""@en  ;
+      rdfs:label "isVendorCategoryOf"^^xsd:string  ;
+      skos:altLabel "is vendor vategory of"^^xsd:string ;
+      rdfs:domain oplven:VendorCategory   ;
+      rdfs:range oplven:Vendor .
+
+oplven:hasVendorCategory a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:comment """Has Vendor Category"""@en  ;
+      rdfs:label "hasVendorCategory"^^xsd:string  ;
+      skos:altLabel "vendor category"^^xsd:string ;
+      rdfs:subPropertyOf oplpro:hasCategory  ;
+      rdfs:domain oplven:Vendor   ;
+      rdfs:range oplven:VendorCategory  .
+
+oplven:hasVendorCategoryFamily a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf oplpro:hasCategory , oplven:hasVendorCategory  ;
+      rdfs:comment """Has Vendor Category Family"""@en  ;
+      rdfs:label "hasVendorCategoryFamily"^^xsd:string  ;
+      skos:altLabel "vendor category family"^^xsd:string ;
+      rdfs:domain oplven:VendorCategory   ;
+      rdfs:range oplven:VendorCategoryFamily  .
+
+oplven:isVendorCategoryFamilyOf a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf oplpro:hasCategory , oplven:hasVendorCategory  ;
+      rdfs:comment """Has Vendor Category Family"""@en  ;
+      rdfs:label "isVendorCategoryFamilyOf"^^xsd:string  ;
+      skos:altLabel "is vendor category family of"^^xsd:string ;
+      rdfs:domain oplven:VendorCategoryFamily   ;
+      rdfs:range oplven:VendorCategory  .
+
+oplven:hasWikipediaPage a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#WikipediaPage>  ;
+      rdfs:comment """Has Wikipedia Page"""@en  ;
+      rdfs:label "hasWikipediaPage"^^xsd:string  ;
+      skos:altLabel "wikipedia page"^^xsd:string ;
+      schema:domainIncludes
+           oplven:Vendor ,
+           oplsof:DbmsFamily ,
+           oplsof:OpsysFamily  ;
+      rdfs:range xsd:string .
+
+oplven:Vendor owl:disjointWith oplsof:DbmsFamily ,
+                               oplsof:OpsysFamily .
+oplsof:DbmsFamily owl:disjointWith oplsof:OpsysFamily  .
+
+oplven:hasVendor a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#DbmsFamilyVendor>  ;
+      rdfs:comment """Associates a DBMS Family with a Vendor"""@en  ;
+      rdfs:label "hasVendor"^^xsd:string  ;
+      skos:altLabel "vendor"^^xsd:string ;
+      schema:domainIncludes
+           oplsof:DbmsFamily ,
+           oplsof:OpsysFamily ,
+           oplmch:ProcessorFamily  ;
+      rdfs:range oplven:Vendor .
+
+oplmch:ProcessorFamily owl:disjointWith oplsof:DbmsFamily ,
+                                        oplsof:OpsysFamily .
+
+oplven:isVendorOf a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf <http://www.openlinksw.com/schemas/oplweb#vendorOf>  ;
+      rdfs:comment """Associates Vendor with a DBMS Family or Processor Family"""@en  ;
+      rdfs:label "isVendorOf"^^xsd:string  ;
+      skos:altLabel "is vendor of"^^xsd:string ;
+      rdfs:domain oplven:Vendor  ;
+      schema:rangeIncludes
+           oplsof:DbmsFamily ,
+           oplsof:OpsysFamily ,
+           oplmch:ProcessorFamily .
+
+oplven:hasVendorName a owl:ObjectProperty, rdf:Property  ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/vendors#>  ;
+      rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/name> , <http://www.openlinksw.com/schemas/oplweb#VendorName>  ;
+      rdfs:comment """Has Vendor Name"""@en  ;
+      rdfs:label "hasVendorName"^^xsd:string  ;
+      skos:altLabel "vendor name"^^xsd:string ;
+      rdfs:domain oplven:Vendor   ;
+      rdfs:range xsd:string .
+
+xhv:related owl:equivalentProperty rdfs:seeAlso .
+
+foaf:primaryTopic owl:inverseOf xhv:describedby , wdrs:describedby .
+
+wdrs:describedby owl:equivalentProperty xhv:describedby .
+
+rdfs:subClassOf a owl:TransitiveProperty .
+
+

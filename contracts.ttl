@@ -1,0 +1,211 @@
+@prefix schema:    <http://schema.org/> .
+@prefix cvocab:    <http://open-services.net/ns/core#> .
+@prefix sioc:      <http://rdfs.org/sioc/ns#> .
+@prefix oplweb:    <http://www.openlinksw.com/schemas/oplweb#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix gr:        <http://purl.org/goodrelations/v1#> .
+@prefix siocs:     <http://rdfs.org/sioc/services#> .
+@prefix foaf:      <http://xmlns.com/foaf/0.1/> .
+@prefix wdrs:      <http://www.w3.org/2007/05/powder-s#> .
+@prefix prodont:   <http://www.productontology.org/id/> .
+@prefix xhv:       <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix oplcont:   <http://www.openlinksw.com/ontology/contracts#> .
+@prefix cc:        <http://creativecommons.org/ns#> .
+
+<http://www.openlinksw.com/ontology/contracts#>
+  a owl:Ontology ;
+  rdfs:label """OpenLink Contracts Ontology"""^^xsd:string ;
+  rdfs:comment """Ontology that defines entity and relation types used to describe contracts. Examples include terms, contract types etc."""@en ;
+  wdrs:describedby <http://www.openlinksw.com/ontology/contracts> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  owl:versionInfo "1.0.0"^^xsd:string ;
+  owl:imports <http://purl.org/goodrelations/v1> ,
+              <http://www.w3.org/2002/07/owl#> ,
+              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+              <http://purl.org/dc/terms/> ;
+  <http://open.vocab.org/terms/defines>
+              oplcont:Contract ,
+              oplcont:SupportContract ,
+              oplcont:CustomDevelopContract ,
+              oplcont:hasContractTerm ,
+              oplcont:Term ,
+              oplcont:isUnitTermOf,
+              oplcont:Platinum ,
+              oplcont:Gold ,
+              oplcont:Silver ,
+              oplcont:Bronze ;
+  schema:about
+              oplcont:Contract ,
+              oplcont:SupportContract ,
+              oplcont:CustomDevelopContract ,
+              oplcont:hasContractTerm ,
+              oplcont:Term ,
+              oplcont:isUnitTermOf,
+              oplcont:Platinum ,
+              oplcont:Gold ,
+              oplcont:Silver ,
+              oplcont:Bronze .
+
+<http://open.vocab.org/terms/defines> owl:inverseOf <http://www.w3.org/2007/05/powder-s#describedby> .
+
+<http://www.openlinksw.com/DAV/data/turtle/contracts.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Contracts Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an OpenLink ontology for Contracts."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/contracts#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/contracts> ;
+  xhv:describes <http://www.openlinksw.com/ontology/contracts#> ;
+  schema:about <http://www.openlinksw.com/ontology/contracts#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/contracts#> .
+
+<http://www.openlinksw.com/data/turtle/contracts.ttl>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label "OpenLink Contracts Ontology Description Document (Turtle)" ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe OpenLink Support Contract Ontology."""@en ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/contracts#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  xhv:canonical <http://www.openlinksw.com/ontology/contracts> ;
+  xhv:describes <http://www.openlinksw.com/ontology/contracts#> ;
+  schema:about <http://www.openlinksw.com/ontology/contracts#> ;
+  dcterms:subject <http://www.openlinksw.com/ontology/contracts#> .
+
+<http://www.openlinksw.com/ontology/contracts>
+  a foaf:Document , schema:TechArticle ;
+  rdfs:label """OpenLink Contracts Ontology Description Document"""^^xsd:string ;
+  cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+  schema:creator <http://www.openlinksw.com/#this> ;
+  rdfs:comment """This is a document that uses Linked Data oriented content to describe OpenLink Contracts Ontology."""@en ;
+  dcterms:subject <http://www.openlinksw.com/ontology/contracts#> ;
+  dcterms:created "2014-05-18T13:00:00-05:00"^^xsd:dateTime ;
+  dcterms:modified "2015-03-20T13:38:00-05:00"^^xsd:dateTime ;
+  foaf:primaryTopic <http://www.openlinksw.com/ontology/contracts#> ;
+  foaf:topic oplcont:Contract ,
+              oplcont:SupportContract ,
+              oplcont:CustomDevelopContract ,
+              oplcont:hasContractTerm ,
+              oplcont:Term ,
+              oplcont:isUnitTermOf ,
+              oplcont:Platinum ,
+              oplcont:Gold ,
+              oplcont:Silver ,
+              oplcont:Bronze .
+
+
+<http://www.openlinksw.com/data/turtle/contracts.ttl>
+  rdfs:seeAlso <http://virtuoso.openlinksw.com/offers/> ,
+               <http://uda.openlinksw.com/offers/> ,
+               <http://www.openlinksw.com/data/turtle/shop.ttl> ,
+               <http://www.openlinksw.com/data/turtle/offers.ttl> ,
+               <http://www.openlinksw.com/data/turtle/products.ttl> ,
+               <http://www.openlinksw.com/data/turtle/software.ttl> ,
+               <http://www.openlinksw.com/data/turtle/machines.ttl> ,
+               <http://www.openlinksw.com/data/turtle/vendors.ttl> ,
+               <http://www.openlinksw.com/data/turtle/purchases.ttl> ,
+               <http://www.openlinksw.com/data/turtle/features.ttl> ,
+               <http://www.openlinksw.com/data/turtle/payments.ttl> ,
+               <http://www.openlinksw.com/data/turtle/licenses.ttl> .
+
+
+# <-------------- Contracts --------------> #
+
+# <-------------- Contracts Classes --------------> #
+
+oplcont:Contract a owl:Class ;
+      rdfs:label "Contract"^^xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+oplcont:SupportContract a owl:Class ;
+      rdfs:subClassOf oplcont:Contract ;
+      rdfs:label "Support Contract"^^xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+oplcont:CustomDevelopContract a owl:Class ;
+      rdfs:subClassOf oplcont:Contract ;
+      rdfs:label "Custom Develop Contract"^^xsd:string ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+
+oplcont:ExpiringContract a owl:Class ;
+          rdfs:label "Expiring Contract"^^xsd:string ;
+          rdfs:subClassOf oplcont:Contract ;
+          rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+oplcont:NonExpiringContract a owl:Class ;
+          rdfs:label "Non Expiring Contract"^^xsd:string ;
+          rdfs:subClassOf oplcont:Contract ;
+          rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+
+# <-------------- Contracts Properties --------------> #
+
+oplcont:hasContractTerm a owl:ObjectProperty, rdf:Property ;
+      rdfs:label "hasContractTerm"^^xsd:string ;
+      skos:prefLabel "Contract Term Unit"^^xsd:string ;
+      rdfs:comment """Contract Term Unit subcomponent."""@en ;
+      dcterms:description """The objects of this relation provide data used for calculating add-ons units to the main contract."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+      rdfs:domain oplcont:Contract ;
+      rdfs:range oplcont:Term ;
+      owl:inverseOf oplcont:isUnitTermOf .
+
+oplcont:Platinum a oplcont:SupportContract ;
+                rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+                rdfs:label "Platinum Support Contract"^^xsd:string .
+
+oplcont:Gold a oplcont:SupportContract ;
+                rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+                rdfs:label "Gold Support Contract"^^xsd:string .
+
+oplcont:Silver a oplcont:SupportContract ;
+                rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+                rdfs:label "Silver Support Contract"^^xsd:string .
+
+
+oplcont:Bronze a oplcont:SupportContract ;
+                rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+                rdfs:label "Bronze Support Contract"^^xsd:string .
+
+# <-------------- Terms --------------> #
+
+# <-------------- Terms Classes --------------> #
+
+oplcont:Term a owl:Class ;
+      rdfs:label "Contract Term"^^xsd:string ;
+      rdfs:comment """One of several terms (conditions) that comprise a contract."""@en ;
+      dcterms:description """Relation that associates contracts with specific terms (conditions). These terms are associated with units that contribute to total contract price."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> .
+
+# <-------------- Terms Properties --------------> #
+
+oplcont:isUnitTermOf a owl:ObjectProperty, rdf:Property ;
+      rdfs:label "isUnitTermOf"^^xsd:string ;
+      skos:prefLabel "Is Unit Term of Contract"^^xsd:string ;
+      rdfs:comment """Inverse Of Has Contract Term Relation."""@en ;
+      dcterms:description """Unit item that has a price used to calculate the total costs of rights (entitlements) conveyed by a contract."""@en ;
+      rdfs:isDefinedBy <http://www.openlinksw.com/ontology/contracts#> ;
+      rdfs:domain oplcont:Term ;
+      rdfs:range oplcont:Contract ;
+      owl:inverseOf oplcont:hasContractTerm .
+
+
+xhv:related owl:equivalentProperty rdfs:seeAlso .
+
+foaf:primaryTopic owl:inverseOf xhv:describedby , wdrs:describedby .
+
+wdrs:describedby owl:equivalentProperty xhv:describedby .
+
+rdfs:subClassOf a owl:TransitiveProperty .
