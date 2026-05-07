@@ -68,6 +68,7 @@
      oplprchs:hasPreceedingState ,
      oplprchs:hasFollowingState ,
      oplprchs:hasProcessMessage ,
+     oplprchs:receipt ,
      oplprchs:PaymentPending ,
      oplprchs:PaymentCompleted ,
      oplprchs:PaymentFailed ,
@@ -110,6 +111,7 @@
      oplprchs:hasPreceedingState ,
      oplprchs:hasFollowingState ,
      oplprchs:hasProcessMessage ,
+     oplprchs:receipt ,
      oplprchs:PaymentPending ,
      oplprchs:PaymentCompleted ,
      oplprchs:PaymentFailed ,
@@ -191,6 +193,7 @@
              oplprchs:hasPreceedingState ,
              oplprchs:hasFollowingState ,
              oplprchs:hasProcessMessage ,
+             oplprchs:receipt ,
              oplprchs:PaymentPending ,
              oplprchs:PaymentCompleted ,
              oplprchs:PaymentFailed ,
@@ -504,6 +507,15 @@ oplprchs:hasProcessMessage
   rdfs:comment """A message that can be shown to the user while a shop system processes a purchase in the given state."""@en ;
   rdfs:isDefinedBy <http://www.openlinksw.com/ontology/purchases#> ;
   rdfs:domain oplprchs:PurchaseState ;
+  rdfs:range xsd:string .
+
+oplprchs:receipt
+  a owl:DatatypeProperty, rdf:Property ;
+  rdfs:label "receipt" ;
+  skos:altLabel "Receipt"^^xsd:string ;
+  rdfs:comment """Receipt showing purchase has successfully completed."""@en ;
+  rdfs:isDefinedBy <http://www.openlinksw.com/ontology/purchases#> ;
+  rdfs:domain oplprchs:Purchase ;
   rdfs:range xsd:string .
 
 # <-------------- Instances --------------> #
